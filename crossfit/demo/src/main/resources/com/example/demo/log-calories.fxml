@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="657.0" style="-fx-background-color: #232D3F;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.logCaloriesController">
+   <children>
+      <Pane layoutX="51.0" layoutY="100.0" prefHeight="200.0" prefWidth="245.0" style="-fx-background-color: black;">
+         <children>
+            <Label layoutX="30.0" layoutY="31.0" text="Email :" textFill="WHITE" />
+            <Label layoutX="4.0" layoutY="67.0" text="Meal Name :" textFill="WHITE" />
+            <Label layoutX="24.0" layoutY="109.0" text="Calories :" textFill="WHITE" />
+            <TextField fx:id="tfEmail" layoutX="81.0" layoutY="27.0" prefHeight="25.0" prefWidth="159.0" />
+            <TextField fx:id="tfMealName" layoutX="81.0" layoutY="63.0" prefHeight="25.0" prefWidth="159.0" />
+            <TextField fx:id="tfCalories" layoutX="81.0" layoutY="105.0" prefHeight="25.0" prefWidth="159.0" />
+         </children>
+      </Pane>
+      <TableView fx:id="table" layoutX="340.0" layoutY="100.0" prefHeight="200.0" prefWidth="270.0">
+        <columns>
+          <TableColumn fx:id="colMealName" prefWidth="75.0" text="Meal Name" />
+            <TableColumn fx:id="colCalories" prefWidth="75.0" text="Calories" />
+            <TableColumn fx:id="colTimeStamp" prefWidth="117.0" text="Time Stamp" />
+
+        </columns>
+      </TableView>
+      <Button fx:id="btnaddcalories" layoutX="257.0" layoutY="325.0" mnemonicParsing="false" onAction="#ClickAddButton" prefHeight="39.0" prefWidth="127.0" style="-fx-background-color: #005B41;" text="Add Calories" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutY="-6.0" prefHeight="50.0" prefWidth="660.0" style="-fx-background-color: #008170;">
+         <children>
+            <Label layoutX="251.0" layoutY="6.0" prefHeight="39.0" prefWidth="159.0" text="Log Calories">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

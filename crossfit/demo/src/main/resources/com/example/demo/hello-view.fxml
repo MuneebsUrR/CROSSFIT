@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="402.0" prefWidth="740.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <AnchorPane prefHeight="362.0" prefWidth="701.0">
+            <children>
+                <Label layoutX="234.0" layoutY="6.0" prefHeight="32.0" prefWidth="234.0" text="Manage Memberships" textFill="#427d9d">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font></Label>
+                <Pane layoutX="25.0" layoutY="60.0" prefHeight="224.0" prefWidth="275.0" style="-fx-background-color: black;">
+                    <children>
+                        <Label layoutX="14.0" layoutY="25.0" text="Member ID :" textFill="WHITE" />
+                        <Label layoutX="20.0" layoutY="52.0" />
+                        <Label layoutX="14.0" layoutY="73.0" text="Status :" textFill="WHITE" />
+                        <Label layoutX="13.0" layoutY="121.0" text="start date :" textFill="WHITE" />
+                        <Label layoutX="15.0" layoutY="169.0" text="End Date :" textFill="WHITE" />
+                        <TextField fx:id="tfID" layoutX="89.0" layoutY="21.0" />
+                        <ChoiceBox fx:id="tfStatus" layoutX="88.0" layoutY="69.0" prefWidth="150.0" />
+                        <DatePicker fx:id="StartDate" layoutX="87.0" layoutY="117.0" prefHeight="25.0" prefWidth="150.0" />
+                        <DatePicker fx:id="EndDate" layoutX="87.0" layoutY="165.0" prefHeight="25.0" prefWidth="150.0" />
+                    </children>
+                </Pane>
+                <TableView fx:id="table" layoutX="310.0" layoutY="54.0" prefHeight="233.0" prefWidth="375.0">
+                    <columns>
+                        <TableColumn fx:id="idCol" prefWidth="75.0" text="Member ID" />
+                        <TableColumn fx:id="statusCol" prefWidth="75.0" text="Status" />
+                        <TableColumn fx:id="startdateCol" prefWidth="75.0" text="Start Date" />
+                        <TableColumn fx:id="enddateCol" prefWidth="75.0" text="End Date" />
+                        <TableColumn fx:id="nameCol" prefWidth="75.0" text="name" />
+                    </columns>
+                </TableView>
+                <Button fx:id="btnAdd" layoutX="25.0" layoutY="311.0" mnemonicParsing="false" onAction="#Add" prefHeight="32.0" prefWidth="66.0" style="-fx-background-color: #427D9D;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+                <Button fx:id="btnUpdate" layoutX="130.0" layoutY="311.0" mnemonicParsing="false" onAction="#Update" prefHeight="32.0" prefWidth="66.0" style="-fx-background-color: #427D9D;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+                <Button fx:id="btnDelete" layoutX="234.0" layoutY="311.0" mnemonicParsing="false" onAction="#Delete" prefHeight="32.0" prefWidth="66.0" style="-fx-background-color: #427D9D;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            </children></AnchorPane>
+    </children>
+</VBox>
